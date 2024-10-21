@@ -12,7 +12,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->string('slug')->unique(); 
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
