@@ -1,3 +1,231 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'KeplerStd';
+    src: url(/public/fonts/KeplerStdItalic.otf) format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'utopiastd';
+    src: url(/public/fonts/utopiastd-semibolddisp.otf) format('truetype');
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 24px;
+    font-family: 'KeplerStd', Arial, sans-serif;
+    font-weight: bold;
+}
+
+header input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    padding: 10px 20px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Contenu principal */
+main {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+.content article img {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.content h2 {
+    font-family: 'utopiastd', sans-serif;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;             /* Utilise flexbox */
+    align-items: center;      /* Centre verticalement les éléments */
+    text-decoration: none;    /* Supprime le soulignement */
+    color: #333;              /* Couleur du texte */
+}
+
+.social-links img {
+    margin-right: 8px;        /* Espace entre l'image et le texte */
+    width: 24px;              /* Largeur de l'image */
+    height: 24px;             /* Hauteur de l'image */
+}
+
+/* Barre latérale */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.sidebar .about-author,
+.sidebar .social-links,
+.sidebar .recent-articles {
+    margin-bottom: 20px;
+}
+
+.div-profile {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.profile-content-1 {
+    display: flex;                      /* Utilise flexbox pour aligner le texte */
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.profile-content-1 p {
+    font-size: 15px;
+    color: #4a5568;
+}
+
+.profile-content-1 h2 {
+    font-size: 23px;
+    font-family: 'KeplerStd', Arial, sans-serif;
+}
+
+.profile-content-2 {
+    display: flex;                     /* Flex pour l'image */
+    justify-content: center;           /* Centre l'image horizontalement si nécessaire */
+}
+
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.social-connect h3 {
+    font-size: 23px;
+    font-family: 'KeplerStd', Arial, sans-serif;
+}
+
+.social-connect hr {
+    border: none;                 /* Supprime la bordure par défaut */
+    height: 1px;                  /* Définit l'épaisseur de la ligne */
+    background-color: black;
+    width: 90%;
+    margin: 10px 0;
+}
+
+
+/* Section articles récents */
+.recent-articles {
+    margin-top: 30px;
+    background: #f9f9f9;
+}
+
+.recent-articles h3 {
+    font-size: 20px;
+    font-family: 'KeplerStd', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.recent-articles .article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recent-articles .article img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.recent-articles .article p a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.recent-articles .article p a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* Pied de page */
+footer {
+    width: 100%;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.social-icons {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+h3 {
+    font-family: 'KeplerStd', Arial, sans-serif;
+}
