@@ -90,6 +90,10 @@ main {
     font-family: Instrument Sans;
 }
 
+.content article {
+    padding-bottom: 80px;
+}
+
 .content article img {
     width: 80%;
     margin-top: 15px;

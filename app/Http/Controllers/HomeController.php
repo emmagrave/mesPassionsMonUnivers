@@ -10,6 +10,9 @@ class HomeController extends Controller
     public function index()
     {
         $articles = Article::latest()->take(2)->get();
-        return view('home', compact('articles'));
+        // Les 4 articles suivants, excluant les 2 derniers
+        //$articles_recents = Article::latest()->skip(2)->take(4)->get();
+        $articlesRecents = Article::latest()->take(4)->get();
+        return view('home', compact('articles','articlesRecents'));
     }
 }

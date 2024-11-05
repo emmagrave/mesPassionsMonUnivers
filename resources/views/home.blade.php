@@ -32,7 +32,7 @@
                     @endif
                 </p>
                 <img src="{{  $article->image }}" alt="{{ $article->title }}">
-                <p class="content-article">{{ Str::limit($article->content, 400) }}</p>
+                <p class="content-article">{{ Str::limit($article->content, 401) }}</p>
                 <a href="{{ route('articles.show', $article->slug) }}">Continue reading →</a>
             </article>
         @endforeach
@@ -61,11 +61,11 @@
                 <ul>
                     <li>
                         <a href="https://www.pinterest.fr/monuniverspassions/" target="_blank">
-                            <img src="{{ asset('images/social/pinterest.png') }}"alt="Pinterest" width="24" height="24"> Pinterest
+                            <img src="{{ asset('images/social/pinterest.png') }}" alt="Pinterest" width="24" height="24"> Pinterest
                         </a>
                     </li><hr>
                     <li><a href="https://www.instagram.com/mespassionsmonunivers/">
-                            <img src="{{ asset('images/social/instagram.png') }}"alt="Instagram" width="24" height="24"> Instagram
+                            <img src="{{ asset('images/social/instagram.png') }}" alt="Instagram" width="24" height="24"> Instagram
                         </a></li><hr>
                     <li>
                         <a href="mailto:monuniverspassions@gmail.com">
@@ -78,10 +78,12 @@
             <!-- Section articles récents -->
             <div class="recent-articles">
                 <h3>Articles récents</h3>
+                @foreach ($articlesRecents as $article)
                 <div class="article">
                     <img src="{{ $article->image }}" alt="Article image">
                     <p><a href="article-link">{{ $article->title }}</a></p>
                 </div>
+                @endforeach
             </div>
     </aside>
 </main>

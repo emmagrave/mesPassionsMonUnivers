@@ -43,6 +43,43 @@ class ArticleSeeder extends Seeder
             'image' => '/images/articles/premiereLecture.jpg',
             'published_at' => Carbon::now(),
         ]);
+
+        Article::create([
+            'title' => 'Octobre Rose : Le Mois est Passé, mais la Lutte Continue',
+            'slug' => Str::slug('Octobre Rose la Lutte Continue'),
+            'content' => '
+Le mois d\'octobre est terminé, mais la sensibilisation au cancer du sein doit rester présente toute l’année. Chaque année, Octobre Rose met en lumière l\'importance du dépistage et de la recherche, mais il est essentiel de rappeler que la lutte contre cette maladie ne se limite pas à un seul mois. Parlons du cancer du sein, agissons, et restons vigilants, car chaque jour compte pour sauver des vies.
+
+Pourquoi Parler du Cancer du Sein Toute l’Année ?
+
+Le cancer du sein est l\'un des cancers les plus fréquents, touchant environ 1 femme sur 8 en France. Même si on en parle souvent comme un "cancer féminin," il peut aussi toucher les hommes. Aborder ce sujet tout au long de l’année permet de maintenir une prise de conscience continue et de souligner l’importance des actions préventives et de soutien.
+
+    Dépistage Précoce : Prendre l’habitude de se faire dépister régulièrement est essentiel pour une détection précoce. Les mammographies et les auto-examens des seins devraient être intégrés dans les habitudes de santé, et pas seulement en octobre.
+
+    Informer et Éduquer : Parler du cancer du sein toute l’année permet de sensibiliser davantage aux risques, aux symptômes et aux traitements. En partageant des informations fiables, nous contribuons à faire tomber les tabous et encourageons les femmes, et les hommes, à surveiller leur santé.
+
+    Comment Agir Toute l’Année
+
+Pour soutenir cette cause au-delà d’octobre, voici quelques actions que chacun peut intégrer dans sa vie quotidienne :
+
+Planifiez des examens réguliers : Ne laissez pas l’année s’écouler sans un rendez-vous pour un examen. Se tenir à jour avec les dépistages est un geste simple mais crucial.
+
+    Soutenez des associations : Plusieurs associations œuvrent toute l’année pour accompagner les personnes atteintes de cancer du sein. Que ce soit par des dons ou du bénévolat, chaque geste fait la différence.
+
+    Diffusez l’information : Profitez de vos réseaux sociaux pour parler du cancer du sein et des moyens de prévention. Informez vos proches sur les signes à surveiller et les ressources disponibles.
+
+    Adoptez un mode de vie sain : Manger équilibré, faire de l’exercice régulièrement, et gérer son stress contribuent à une meilleure santé globale et peuvent aider à réduire le risque de cancer.
+
+    Ensemble, Continuons le Combat !
+
+    Ensemble, faisons de la sensibilisation et du soutien une priorité de tous les jours. Continuons à éduquer, à aider, et à motiver ceux qui en ont besoin, pour faire une réelle différence dans la vie de millions de personnes.
+            ',
+
+            'category' => 'Prévention',
+            'author' => 'Emma',
+            'image' => '/images/articles/cancerSein.jpg',
+            'published_at' => Carbon::now(),
+        ]);
     }
 }
 
