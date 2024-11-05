@@ -23,16 +23,16 @@
             <article>
                 <span class="category">{{ $article->category }}</span>
                 <h2>{{ $article->title }}</h2>
-                <p>
-                    Published by {{ $article->author }}
+                <p class="published">
+                    Published by <strong>{{ $article->author }}</strong>
                     @if ($article->published_at)
-                        on {{ $article->published_at->format('d M Y') }}
+                        on <strong>{{ $article->published_at->format('d M Y') }}</strong>
                     @else
                         (Date de publication non disponible)
                     @endif
                 </p>
-                <img src="{{ asset('images/' . $article->image) }}" alt="{{ $article->title }}">
-                <p>{{ \Illuminate\Support\Str::limit($article->content, 150) }}</p>
+                <img src="{{  $article->image }}" alt="{{ $article->title }}">
+                <p class="content-article">{{ Str::limit($article->content, 400) }}</p>
                 <a href="{{ route('articles.show', $article->slug) }}">Continue reading →</a>
             </article>
         @endforeach
@@ -79,7 +79,7 @@
             <div class="recent-articles">
                 <h3>Articles récents</h3>
                 <div class="article">
-                    <img src="path/to/article-image.jpg" alt="Article image">
+                    <img src="{{ $article->image }}" alt="Article image">
                     <p><a href="article-link">{{ $article->title }}</a></p>
                 </div>
             </div>

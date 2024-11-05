@@ -12,8 +12,11 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
+            $table->string('category');
+            $table->string('author');
             $table->string('slug')->unique();
             $table->string('image')->nullable();
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

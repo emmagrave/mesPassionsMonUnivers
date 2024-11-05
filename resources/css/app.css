@@ -19,6 +19,11 @@
     src: url(/public/fonts/InstrumentSans-VariableFont_wdth,wght.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'MG Serif';
+    src: url(/public/fonts/MG-serif.otf) format('opentype');
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -81,16 +86,32 @@ main {
 
 .content {
     flex: 3;
-    padding: 20px;
+    padding: 40px;
+    font-family: Instrument Sans;
 }
 
 .content article img {
-    width: 100%;
+    width: 80%;
     margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.category {
+    color: #718096;
 }
 
 .content h2 {
-    font-family: 'utopiastd', sans-serif;
+    font-family: 'MG Serif', serif;
+    font-size: 40px;
+}
+
+.published {
+    color: #718096;
+    font-size: 15px;
+}
+
+.content-article {
+    padding-right: 30px;
 }
 
 .pagination {
