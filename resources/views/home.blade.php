@@ -59,9 +59,19 @@
             <div class="social-connect">
                 <h3>Let’s connect</h3>
                 <ul>
-                    <li><a href="https://www.pinterest.fr/monuniverspassions/" target="_blank">Pinterest</a></li><hr>
-                    <li><a href="https://www.instagram.com/mespassionsmonunivers/" target="_blank">Instagram</a></li><hr>
-                    <li><a href="mailto:contact@monuniverspassions.com">Mail</a></li><hr>
+                    <li>
+                        <a href="https://www.pinterest.fr/monuniverspassions/" target="_blank">
+                            <img src="{{ asset('images/social/pinterest.png') }}"alt="Pinterest" width="24" height="24"> Pinterest
+                        </a>
+                    </li><hr>
+                    <li><a href="https://www.instagram.com/mespassionsmonunivers/">
+                            <img src="{{ asset('images/social/instagram.png') }}"alt="Instagram" width="24" height="24"> Instagram
+                        </a></li><hr>
+                    <li>
+                        <a href="mailto:monuniverspassions@gmail.com">
+                            <img src="{{ asset('images/social/email.png') }}" alt="Mail" width="24" height="24"> Mail
+                        </a>
+                    </li><hr>
                 </ul>
             </div>
 

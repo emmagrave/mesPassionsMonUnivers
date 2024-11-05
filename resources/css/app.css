@@ -11,7 +11,12 @@
 
 @font-face {
     font-family: 'utopiastd';
-    src: url(/public/fonts/utopiastd-semibolddisp.otf) format('truetype');
+    src: url(/public/fonts/utopiastd-semibolddisp.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url(/public/fonts/InstrumentSans-VariableFont_wdth,wght.ttf) format('truetype');
 }
 
 /* Reset */
@@ -112,6 +117,7 @@ main {
     flex: 1;
     padding: 20px;
     border-left: 1px solid #ddd;
+    font-family: Instrument Sans;
 }
 
 .sidebar .about-author,
@@ -126,14 +132,14 @@ main {
 }
 
 .profile-content-1 {
-    display: flex;                      /* Utilise flexbox pour aligner le texte */
+    display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
 
 .profile-content-1 p {
     font-size: 15px;
-    color: #4a5568;
+    color:#718096;
 }
 
 .profile-content-1 h2 {
@@ -142,8 +148,8 @@ main {
 }
 
 .profile-content-2 {
-    display: flex;                     /* Flex pour l'image */
-    justify-content: center;           /* Centre l'image horizontalement si nécessaire */
+    display: flex;
+    justify-content: center;
 }
 
 .profile-photo {
@@ -164,6 +170,19 @@ main {
     font-family: 'KeplerStd', Arial, sans-serif;
 }
 
+.social-connect a {
+    display: flex;             /* Utilise flexbox */
+    align-items: center;      /* Centre verticalement les éléments */
+    text-decoration: none;    /* Supprime le soulignement */
+    color: #333;              /* Couleur du texte */
+}
+
+.social-connect img {
+    margin-right: 8px;        /* Espace entre l'image et le texte */
+    width: 24px;              /* Largeur de l'image */
+    height: 24px;             /* Hauteur de l'image */
+}
+
 .social-connect hr {
     border: none;                 /* Supprime la bordure par défaut */
     height: 1px;                  /* Définit l'épaisseur de la ligne */
@@ -177,6 +196,7 @@ main {
 .recent-articles {
     margin-top: 30px;
     background: #f9f9f9;
+    margin-left: 20px;
 }
 
 .recent-articles h3 {
